@@ -16,6 +16,11 @@ class Page
         return View::render('pages/header');
     }
 
+    private static function getFooter()
+    {
+        return View::render('pages/footer');
+    }
+
     /**
      * motodo responsavel por retornar o conteudo (view) da nossa pagina generica
      *
@@ -26,7 +31,8 @@ class Page
         return View::render('pages/page', [
             'title' => $title,
             'header' => self::getHeader(),
-            'content' => $content
+            'content' => $content,
+            'footer' => self::getFooter()
         ]);
     }
 }
