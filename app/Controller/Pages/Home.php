@@ -13,7 +13,7 @@ class Home extends Page
      */
     public static function getHome()
     {
-        $content View::render('pages/home', [
+        $content = View::render('pages/home', [
             'name' => 'WDEV - Canal',
             'description' => 'site: https://www.google.com.br'
         ]);
