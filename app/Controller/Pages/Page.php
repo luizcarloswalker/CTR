@@ -7,6 +7,16 @@ use App\Utils\View;
 class Page
 {
     /**
+     * Metodo responsavel por rendenizar o topo da pagina
+     *
+     * @return string
+     */
+    private static function getHeader()
+    {
+        return View::render('pages/header');
+    }
+
+    /**
      * motodo responsavel por retornar o conteudo (view) da nossa pagina generica
      *
      * @return string
@@ -15,6 +25,7 @@ class Page
     {
         return View::render('pages/page', [
             'title' => $title,
+            'header' => self::getHeader(),
             'content' => $content
         ]);
     }
