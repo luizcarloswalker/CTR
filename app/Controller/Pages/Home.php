@@ -13,7 +13,7 @@ class Home
      */
     public static function getHome()
     {
-        return View::render('pages/home', [
+        return View::render('pages/page', [
             'name' => 'WDEV - Canal',
             'description' => 'site: https://www.google.com.br'
         ]);
