@@ -18,6 +18,6 @@ class Home extends Page
             'description' => 'site: https://www.google.com.br'
         ]);
         //retorna a view da pagina
-        return parent::getPage('CTR - Clube de Tiro Realeza', $content)
+        return parent::getPage('CTR - Clube de Tiro Realeza', $content);
     }
 }
