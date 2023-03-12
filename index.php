@@ -2,12 +2,21 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+use App\Http\Router;
+use App\Http\Response;
 use App\Controller\Pages\Home;
 
-$obRequest = new \App\Http\Request();
-echo "<pre>";
-print_r($obRequest);
-echo "</pre>";
-exit;
+define('URL', 'http://localhost/ctr');
 
-echo Home::getHome();
+
+$obRouter = new Router(URL);
+
+//Rota Home
+$obRouter->get('/', [
+function () {
+    return new Response(200, Home::getHome());
+}
+]);
+
+//imprime o response da rota
+$obRouter->run()->sendResponse();
